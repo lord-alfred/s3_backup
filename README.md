@@ -367,7 +367,7 @@ tar -xzf /path/to/save/data_2022-01-01_00-00.tar.gz
 /usr/local/bin/aws s3 ls s3://BUCKET_NAME/ --endpoint-url=https://hb.bizmrg.com
 ```
 
-2. Отправка большого архива без сохранения копии на диске:
+2. Архивирование большого файла и отправка в S3 без сохранения архива на диске:
 
 ```bash
 tar -cv huge_file.log | /usr/local/bin/aws s3 cp - s3://BUCKET_NAME/archive_name.tar.gz --endpoint-url=https://hb.bizmrg.com
